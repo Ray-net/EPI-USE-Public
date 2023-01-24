@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewpoint" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/tablestyle.css" />
+    <script src="/axios/axios.min.js"></script>
+    <title>Employee records</title>
+  </head>
+  <body>
+    <div class="topbarmenu" id="topbar">
+      <a href="/">Tree</a>
+      <a href="/table-view">Table</a>
+    </div>
+    <br />
+    <br />
+    <br />
+    <br />
+    <div class="selectorcontainer">
+      Filter by Salary<br />
+      min:<input
+        id="min"
+        type="number"
+        value="0"
+        onchange="filterSalary()"
+      />max<input
+        id="max"
+        type="number"
+        value="10000000000000"
+        onchange="filterSalary()"
+      />
+    </div>
+    <br />
+    <div class="selectorcontainer">
+      Filter by Manager<br /><select
+        class="managerSelect"
+        data-attribute="class"
+        onchange="filterTableManger()"
+      ></select>
+    </div>
+    <br />
+    <div class="selectorcontainer">
+      Filter by Role<br />
+      <select
+        class="roleSelect"
+        data-attribute="class"
+        onchange="filterTableRole()"
+      ></select>
+    </div>
+    <br />
+    <div class="selectorcontainer">
+      Filter Age<br /><select
+        class="ageSelect"
+        data-attribute="class"
+        onchange="filterTableAge()"
+      >
+        <option value="all">Show All</option>
+        <option value="20">0-20</option>
+        <option value="30">20-30</option>
+        <option value="40">30-40</option>
+        <option value="50">40-50</option>
+        <option value="60">50-60</option>
+        <option value="70">60-70</option>
+      </select>
+    </div>
+    <br />
+
+    <table class="sortable">
+      <thead>
+        <tr>
+          <th>Employee Number</th>
+          <th>Name</th>
+          <th>Surname</th>
+          <th>Birth Day</th>
+          <th>Role</th>
+          <th>Manager</th>
+          <th>Salary</th>
+          <th>E-mail</th>
+        </tr>
+      </thead>
+      <tbody id="populate"></tbody>
+
+      <tbody></tbody>
+    </table>
+
+    <script src="/js/tableLogic.js"></script>
+  </body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+        <title>Employee records</title>
+        <script src="/axios/axios.min.js"></script>
+        <link rel="stylesheet" href="/css/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    </head>
+    <body>
+        <div class="topbarmenu" id="topbar">
+            <a href="/">Tree</a>
+            <a href="/table-view">Table</a>
+        </div>
+        <br/>
+        <br/>
+            <form class="searchform">
+                <input type="text" name="search" id="search" placeholder="Search...">
+                </span><button type="button" class="searchbtn">Search <i class="fa fa-search"></i></button>
+            </form>
+
+            <div style="width: 100%;"><button onclick="openForm()" id="createbtn">Create +</button><br/></div>
+            
+            <div id="modalOne" class="modal">
+                <div class="modal-content">
+                  <div class="contact-form">
+                    <a class="close" onclick="closeForm()">&times;</a>
+            <form action="" class="form">
+                <h2>Create Employee</h2>
+                <div>
+                    <label for="employeenr">Employee number</label><br/>
+                    <input type="text" id="employeenr" name="employeenr" value="" required><br/>
+                    <label for="name">Name</label><br/>
+                    <input type="text" id="name" name="name" value="" required><br/>
+                    <label for="surname">Surname</label><br/>
+                    <input type="text" id="surname" name="surname" value="" required><br/>
+                    <label for="dob">Date Of Birth</label><br/>
+                    <input type="date" id="dob" name="dob" value="" required><br/>
+                    <label for="salary">Salary</label><br/>
+                    <input type="number" id="salary" name="salary" value="" required><br/>
+                    <label for="manager">Manager</label><br/>
+                    <input type="text" id="manager" name="manager" value="" ><br/>
+                    <label for="role">Role</label><br/>
+                    <input type="text" id="role" name="role" value="" required><br/>
+                    <label for="email">E-mail</label><br/>
+                	<input type="email" id="email" name="email" value="">
+                    <button type="button" class="create">Submit</button>
+                    </div>
+                  </form>
+                </div>
+            </div>
+          </div>
+        
+        <div class="body genealogy-body genealogy-scroll">
+
+        <div class="tree">
+
+        </div>
+    </div>
+        <script src="/js/indexLogic.js"></script>
+    </body>
+</html>

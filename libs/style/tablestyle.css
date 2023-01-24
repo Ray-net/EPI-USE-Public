@@ -1,0 +1,189 @@
+h2 {
+  text-align: center;
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: white;
+  padding: 30px 0;
+}
+
+
+.sortable {
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: normal;
+  border: none;
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 100%;
+  white-space: nowrap;
+  background-color: white;
+}
+
+.sortable td,
+.sortable th {
+  text-align: center;
+  padding: 8px;
+}
+
+.sortable td {
+  border-right: 1px solid #f8f8f8;
+  font-size: 12px;
+}
+
+.sortable thead th {
+  color: #ffffff;
+  background: #4fc3a1;
+}
+
+.sortable thead th:nth-child(odd) {
+  color: #ffffff;
+  background: #324960;
+}
+
+.sortable tr:nth-child(even) {
+  background: #f8f8f8;
+}
+
+.sortable th {
+  cursor: pointer;
+}
+
+.sortable .asc::after {
+  content: "\25b4";
+}
+
+.sortable .desc::after {
+  content: "\25be";
+}
+
+.sortable .asc::after,
+.sortable .desc::after {
+  margin-left: 5px;
+}
+@media (max-width: 750px) {
+  .sortable {
+    display: block;
+    width: 100%;
+  }
+  .sortable:before {
+    content: "Scroll horizontally >";
+    display: block;
+    text-align: right;
+    font-size: 11px;
+    color: white;
+    padding: 0 0 10px;
+  }
+  .sortable thead,
+  .sortable tbody,
+  .sortable thead th {
+    display: block;
+  }
+  .sortable thead th:last-child {
+    border-bottom: none;
+  }
+  .sortable thead {
+    float: left;
+  }
+  .sortable tbody {
+    width: auto;
+    position: relative;
+    overflow-x: auto;
+  }
+  .sortable td,
+  .sortable th {
+    padding: 20px 0.625em 0.625em 0.625em;
+    height: 60px;
+    vertical-align: middle;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: 120px;
+    font-size: 13px;
+    text-overflow: ellipsis;
+  }
+  .sortable thead th {
+    text-align: left;
+    border-bottom: 1px solid #f7f7f9;
+  }
+  .sortable tbody tr {
+    display: table-cell;
+  }
+  .sortable tbody tr:nth-child(odd) {
+    background: none;
+  }
+  .sortable tr:nth-child(even) {
+    background: transparent;
+  }
+  .sortable tr td:nth-child(odd) {
+    background: #f8f8f8;
+    border-right: 1px solid #e6e4e4;
+  }
+  .sortable tr td:nth-child(even) {
+    border-right: 1px solid #e6e4e4;
+  }
+  .sortable tbody td {
+    display: block;
+    text-align: center;
+  }
+}
+.topbarmenu {
+  width: 100%;
+  background: grey;
+  height: 30px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  padding-top: 10px;
+  transition: 0.5s;
+  margin-bottom: 10px;
+  display: block;
+}
+.topbarmenu a:hover {
+  color: white;
+  text-shadow: white;
+}
+.topbarmenu a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  border-color: black;
+  color: blue;
+  transition: 0.3s;
+}
+
+.back {
+  position: absolute;
+  padding: 8px 8px 8px 32px;
+  top: 0px;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+.roleSelect{
+
+  background: blue;
+  color: white;
+  display: inline-block;
+}
+.ageSelect{
+  position: relative;
+  width: max-content;
+  background: blue;
+  color: white;
+  display: inline-block;
+}
+.selectorcontainer{
+  background: lightgray;
+  width: fit-content;
+  float: auto;
+}
+.managerSelect{
+  background: blue;
+  color: white;
+  display: inline-block;
+}
